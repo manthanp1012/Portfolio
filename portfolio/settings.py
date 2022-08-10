@@ -27,11 +27,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)'
-DEBUG = False
+DEBUG = True
 # if DEBUG:
 #     ALLOWED_HOSTS = ['127.0.0.1']
 
-ALLOWED_HOSTS = ['127.0.0.1', 'portfoliomanthan.herokuapp.com']
+ALLOWED_HOSTS = []
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
@@ -129,13 +129,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "staticfiles")
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "assets")
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
 # if DEBUG:
 #     # HTTPS SETTINGS
 #     SESSION_COOKIE_SECURE = True
@@ -143,10 +143,10 @@ SECURE_SSL_REDIRECT = True
 #     SECURE_SSL_REDIRECT = True
 
 # HSTS SETTINGS
-SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
-SECURE_HSTS_SECURE = True
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
+# SECURE_HSTS_SECURE = True
+# SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 #     # CORS_REPLACE_HTTPS_REFERER = False
 #     HOST_SCHEME = "http://"
