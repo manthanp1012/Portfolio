@@ -29,12 +29,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+
+ALLOWED_HOSTS = ['portfoliomanthan.herokuapp.com']
 # if DEBUG:
 #     ALLOWED_HOSTS = ['127.0.0.1']
-export SECRET_KEY = "1bbdbf0c3db28966da01043eaddb01a1af63b888a592d5fc"
-export DEBUG_VALUE = "True"
-ALLOWED_HOSTS = ['portfoliomanthan.herokuapp.com']
+# export SECRET_KEY = "1bbdbf0c3db28966da01043eaddb01a1af63b888a592d5fc"
+# export DEBUG_VALUE = "True"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
