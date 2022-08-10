@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path, os
+import django_heroku
+
 from pickle import TRUE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -130,6 +132,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+django_heroku.settings(locals())
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = True
