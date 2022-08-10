@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path, os
-
+import django_heroku
 
 from pickle import TRUE
 
@@ -26,12 +26,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)'
+#SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
 DEBUG = True
 # if DEBUG:
 #     ALLOWED_HOSTS = ['127.0.0.1']
-
-ALLOWED_HOSTS = []
+export SECRET_KEY = "1bbdbf0c3db28966da01043eaddb01a1af63b888a592d5fc"
+export DEBUG_VALUE = "True"
+ALLOWED_HOSTS = ['portfoliomanthan.herokuapp.com']
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
@@ -165,3 +168,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, "assets")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())
