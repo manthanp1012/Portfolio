@@ -21,18 +21,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)'
-DEBUG = True
+DEBUG = False
 # if DEBUG:
-#     ALLOWED_HOSTS = ['127.0.0.1', 'portfoliomanthan.herokuapp.com']
+#     ALLOWED_HOSTS = ['127.0.0.1']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'portfoliomanthan.herokuapp.com']
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
 # Application definition
 
 INSTALLED_APPS = [
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
