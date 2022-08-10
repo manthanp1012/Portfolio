@@ -11,10 +11,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path, os
+from pickle import TRUE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
+#     SECRET_KEY = f.read().strip()
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)'
-DEBUG = True
+DEBUG = False
 # if DEBUG:
 #     ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -127,17 +130,20 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
 # if DEBUG:
 #     # HTTPS SETTINGS
 #     SESSION_COOKIE_SECURE = True
 #     CSRF_COOKIE_SECURE = True
 #     SECURE_SSL_REDIRECT = True
 
-#     # HSTS SETTINGS
-#     SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
-#     SECURE_HSTS_SECURE = True
-#     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# HSTS SETTINGS
+SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
+SECURE_HSTS_SECURE = True
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 #     # CORS_REPLACE_HTTPS_REFERER = False
 #     HOST_SCHEME = "http://"
