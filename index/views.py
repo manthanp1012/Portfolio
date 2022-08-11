@@ -30,4 +30,5 @@ def contact(request):
         obj = Contact(name=name, email=email,
                       phone=phone, concern=concern)
         obj.save()
+        # print(obj.name)
     return render(request, 'contact.html')
