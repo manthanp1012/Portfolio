@@ -68,7 +68,7 @@
     <div class="container my-3">
       <h2 class="text-center my-3">Contact Me</h2>
 
-      <form action="/contact" method="POST">
+      <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}
         <div class="form-group">
           <label for="name">Name:</label>
