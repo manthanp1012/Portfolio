@@ -101,6 +101,9 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
+        'manthan': '123',
+    },
+    {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
