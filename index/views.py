@@ -18,20 +18,20 @@ def project(request):
 
 
 def contact(request):
-    # try:
-    if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        concern = request.POST['concern']
-        # print(name)
-        # print(email)
-        # print(phone)
-        # print(concern)
-        obj = Contact(name=name, email=email,
-                      phone=phone, concern=concern)
-        obj.save()
-        # print(obj.name)
-    return render(request, 'contact.html')
-    # except:
-    #     return render(request, 'home.html')
+    try:
+        if request.method == 'POST':
+            name = request.POST['name']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            concern = request.POST['concern']
+            # print(name)
+            # print(email)
+            # print(phone)
+            # print(concern)
+            obj = Contact(name=name, email=email,
+                          phone=phone, concern=concern)
+            obj.save()
+            # print(obj.name)
+        return render(request, 'contact.html')
+    except:
+        return render(request, 'home.html')
