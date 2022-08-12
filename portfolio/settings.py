@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)
 
 #DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 DEBUG = True
-ALLOWED_HOSTS = ['portfoliomanthan.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'portfoliomanthan.herokuapp.com']
 # if DEBUG:
 #     ALLOWED_HOSTS = ['127.0.0.1']
 # export SECRET_KEY = "1bbdbf0c3db28966da01043eaddb01a1af63b888a592d5fc"
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'index',
 ]
 
@@ -139,23 +139,23 @@ STATIC_URL = '/static/'
 # ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
-if DEBUG:
-    # HTTPS SETTINGS
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
+# if DEBUG:
+#     # HTTPS SETTINGS
+#     SESSION_COOKIE_SECURE = True
+#     CSRF_COOKIE_SECURE = True
+#     SECURE_SSL_REDIRECT = True
 
 # HSTS SETTINGS
-SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
-SECURE_HSTS_SECURE = True
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
+# SECURE_HSTS_SECURE = True
+# SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 # CORS_REPLACE_HTTPS_REFERER = False
-#HOST_SCHEME = "https://"
+# HOST_SCHEME = "http://"
 # SECURE_PROXY_SSL_HEADER = None
 # SECURE_SSL_REDIRECT = False
 # SESSION_COOKIE_SECURE = False
@@ -164,7 +164,7 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 # SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 # SECURE_FRAME_DENY = False
 
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 
 # Default primary key field type
