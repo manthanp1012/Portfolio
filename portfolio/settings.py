@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'index',
 ]
 
@@ -101,9 +102,6 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'manthan': '123',
-    },
-    {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
@@ -141,32 +139,32 @@ STATIC_URL = '/static/'
 # ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-# SECURE_SSL_REDIRECT = True
-# if DEBUG:
-#     # HTTPS SETTINGS
-#     SESSION_COOKIE_SECURE = True
-#     CSRF_COOKIE_SECURE = True
-#     SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+if DEBUG:
+    # HTTPS SETTINGS
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_SSL_REDIRECT = True
 
 # HSTS SETTINGS
-# SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
-# SECURE_HSTS_SECURE = True
-# SECURE_HSTS_PRELOAD = True
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 31536000  # 1 YEAR
+SECURE_HSTS_SECURE = True
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
-#     # CORS_REPLACE_HTTPS_REFERER = False
-#     HOST_SCHEME = "http://"
-#     # SECURE_PROXY_SSL_HEADER = None
-#     # SECURE_SSL_REDIRECT = False
-#     # SESSION_COOKIE_SECURE = False
-#     # CSRF_COOKIE_SECURE = False
-#     # SECURE_HSTS_SECONDS = None
-#     # SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-#     # SECURE_FRAME_DENY = False
+# CORS_REPLACE_HTTPS_REFERER = False
+#HOST_SCHEME = "https://"
+# SECURE_PROXY_SSL_HEADER = None
+# SECURE_SSL_REDIRECT = False
+# SESSION_COOKIE_SECURE = False
+# CSRF_COOKIE_SECURE = False
+# SECURE_HSTS_SECONDS = None
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+# SECURE_FRAME_DENY = False
 
-# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 
 # Default primary key field type
