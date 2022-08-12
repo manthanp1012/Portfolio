@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-4c9r55g^4s=4a_b85pu@r5w3vkl8fuf4zrforsc-t1iv)tcot)
 
 #DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 DEBUG = True
-ALLOWED_HOSTS = ['mannthan.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'mannthan.herokuapp.com']
 # if DEBUG:
 #     ALLOWED_HOSTS = ['127.0.0.1']
 # export SECRET_KEY = "1bbdbf0c3db28966da01043eaddb01a1af63b888a592d5fc"
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'index',
 ]
 
