@@ -1,8 +1,9 @@
+import imp
 from unicodedata import name
 from django.shortcuts import render
 from index.models import Contact
-
-
+from django.conf import settings
+from django.core.mail import send_mail
 # Create your views here.
 
 
@@ -16,6 +17,16 @@ def about(request):
 
 def project(request):
     return render(request, 'project.html')
+
+
+def mail_sent(mail):
+    send_mail(
+        'Hi here',
+        'Here is the message.',
+        'patilmanthan51@gmail.com',
+        ['manthanpatil912@gmail.com'],
+        fail_silently=False,
+    )
 
 
 def contact(request):
@@ -32,6 +43,7 @@ def contact(request):
         obj = Contact(name=name, email=email,
                       phone=phone, concern=concern)
         obj.save()
+        send_mail(email)
 
         # print(obj.name)
     return render(request, 'contact.html')
