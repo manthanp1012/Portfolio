@@ -43,7 +43,7 @@ def contact(request):
         obj = Contact(name=name, email=email,
                       phone=phone, concern=concern)
         obj.save()
-        send_mail(email)
+        mail_sent(email)
 
         # print(obj.name)
     return render(request, 'contact.html')
