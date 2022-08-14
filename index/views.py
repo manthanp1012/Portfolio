@@ -19,16 +19,6 @@ def project(request):
     return render(request, 'project.html')
 
 
-def mail_sent(mail):
-    send_mail(
-        'Hi here',
-        'Here is the message.',
-        'patilmanthan51@gmail.com',
-        ['manthanpatil912@gmail.com'],
-        fail_silently=False,
-    )
-
-
 def contact(request):
     # try:
     if request.method == 'POST':
@@ -43,7 +33,6 @@ def contact(request):
         obj = Contact(name=name, email=email,
                       phone=phone, concern=concern)
         obj.save()
-        mail_sent(email)
 
         # print(obj.name)
     return render(request, 'contact.html')
