@@ -4,6 +4,7 @@ from django.shortcuts import render
 from index.models import Contact
 from django.conf import settings
 from django.core.mail import send_mail
+from django.http import HttpResponse
 # Create your views here.
 
 
@@ -30,6 +31,7 @@ def contact(request):
         # print(email)
         # print(phone)
         # print(concern)
+
         obj = Contact(name=name, email=email,
                       phone=phone, concern=concern)
         obj.save()

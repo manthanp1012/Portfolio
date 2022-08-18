@@ -125,7 +125,11 @@
             >Remember me</label
           >
         </div>
-        <button type="submit" class="btn btn-secondary btn-danger">
+        <button
+          onclick="greet()"
+          type="submit"
+          class="btn btn-secondary btn-danger"
+        >
           Submit
         </button>
       </form>
@@ -213,5 +217,10 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function greet() {
+        alert("Data has been Submitted Successfully");
+      }
+    </script>
   </body>
 </html>
