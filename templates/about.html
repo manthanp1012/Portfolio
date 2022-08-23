@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="container-fluid px-0">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-success px-5">
         <a class="navbar-brand" href="#">Manthan Patil</a>
         <button
           class="navbar-toggler"
@@ -35,20 +35,25 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-auto px-5 my-1">
             <li class="nav-item">
-              <a class="nav-link" href="/home"
+              <a class="nav-link mr-3 text-uppercase" href="/home"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
+
             <li class="nav-item">
-              <a class="nav-link active" href="/about">About</a>
+              <a class="nav-link active mr-3 text-uppercase" href="/about"
+                >About</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project">Projects</a>
+              <a class="nav-link mr-3 text-uppercase" href="/project"
+                >Projects</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link text-uppercase" href="/contact">Contact</a>
             </li>
           </ul>
           <!-- <form class="form-inline my-2 my-lg-0">
@@ -67,7 +72,8 @@
     </div>
 
     <div class="container my-0">
-      <h2 class="cardtitle text-center my-3 py-3">About Me</h2>
+      <h2 class="cardtitle text-center my-3 py-3"><ins>About Me</ins></h2>
+      <br />
       <section class="section about-section gray-bg" id="about">
         <div class="container">
           <div
@@ -76,7 +82,7 @@
             <div class="col-lg-6">
               <div class="about-text">
                 <h3 class="dark-color">Do some awesome stuff with me.</h3>
-                <h4 class="theme-color">Full Stack Web Developer</h4>
+                <h4 class="theme-color">DApps & Web Developer | Freelancer</h4>
                 <p>
                   I design and develop amazing websites for customers of various
                   designs, specializing in creating stylish, modern websites,
@@ -89,14 +95,16 @@
                   specializing in creating stylish, modern websites, web
                   services and online stores.
                 </p> -->
+                <br />
+
                 <div class="btn-bar">
                   <a
-                    class="btn btn-secondary btn-danger"
+                    class="btn btn-secondary btn-success mr-2"
                     href="{% url 'project' %}"
                     >View Works</a
                   >
                   <a
-                    class="btn btn-secondary btn-danger"
+                    class="btn btn-secondary btn-success"
                     href="https://www.linkedin.com/in/manthan-patil-59b5a8222/"
                     >Visit LinkedIn</a
                   >
@@ -171,7 +179,7 @@
     <!--Footer starts-->
 
     <!-- Footer -->
-    <footer class="page-footer font-small cyan darken-3">
+    <footer class="page-footer font-small dark-color darken-3">
       <!-- Footer Elements -->
       <div class="container">
         <!-- Grid row-->
@@ -181,9 +189,7 @@
             <div class="mb-5 flex-center">
               <!-- Facebook -->
               <a class="fb-ic">
-                <i
-                  class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
-                >
+                <i class="fab fa-facebook-f fa-lg text-dark mr-md-5 mr-3 fa-2x">
                 </i>
               </a>
               <!-- Twitter -->
@@ -223,9 +229,10 @@
       <!-- Footer Elements -->
 
       <!-- Copyright -->
+      <br /><br />
       <div class="footer-copyright text-center py-3">
         © 2022 Copyright:
-        <a>Manthan Patil</a>
+        <a><strong>Manthan Patil</strong></a>
       </div>
       <!-- Copyright -->
     </footer>

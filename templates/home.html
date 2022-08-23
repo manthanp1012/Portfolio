@@ -16,11 +16,11 @@
       crossorigin="anonymous"
     />
 
-    <title>Portfolio</title>
+    <title>Home</title>
   </head>
   <body>
     <div class="container-fluid px-0">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-success px-5">
         <a class="navbar-brand" href="#">Manthan Patil</a>
         <button
           class="navbar-toggler"
@@ -35,20 +35,22 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-auto px-4 my-1">
             <li class="nav-item">
-              <a class="nav-link active" href="/home"
+              <a class="nav-link active mr-3 text-uppercase" href="/home"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link mr-3 text-uppercase" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project">Projects</a>
+              <a class="nav-link mr-3 text-uppercase" href="/project"
+                >Projects</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link text-uppercase" href="/contact">Contact</a>
             </li>
           </ul>
           <!-- <form class="form-inline my-2 my-lg-0">
@@ -69,9 +71,12 @@
       class="alert alert-success alert-dismissible fade show my-0"
       role="alert"
     >
-      <strong>Hey Visitor!</strong> If you like my portfolio then do check out
-      my work on
-      <strong><a href="https://github.com/manthanp1012">github</a></strong>
+      <strong>Hey Visitor!</strong> check out my work on
+      <strong
+        ><a class="text-dark bg-light" href="https://github.com/manthanp1012"
+          >GitHub</a
+        ></strong
+      >
       <button
         type="button"
         class="close"
@@ -139,7 +144,14 @@
     </div>
 
     <div class="container my-0">
-      <h2 class="cardtitle text-center my-3 py-3">My Recent Projects</h2>
+      <h2 class="cardtitle text-center my-3 py-3">
+        <ins
+          ><a class="text-dark bg-light" href="/project"
+            >Recent Projects</a
+          ></ins
+        >
+      </h2>
+      <br />
       <div class="row">
         <div class="col-md-4">
           <div class="card" style="width: 18rem">
@@ -250,7 +262,7 @@
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">
         © 2022 Copyright:
-        <a>Manthan Patil</a>
+        <a><strong>Manthan Patil</strong></a>
       </div>
       <!-- Copyright -->
     </footer>
